@@ -1,0 +1,6 @@
+# 每次 push 前先跑完整构建，构建失败则阻止 push
+# FIREFLY_SKIP_PRE_PUSH_BUILD 由 scripts/push.sh 在内部真实推送时设置（已先 build 过，避免二次构建）
+if [ -n "$FIREFLY_SKIP_PRE_PUSH_BUILD" ]; then
+	exit 0
+fi
+pnpm build
