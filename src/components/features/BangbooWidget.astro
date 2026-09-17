@@ -1,0 +1,105 @@
+---
+// ZZZ Bangboo Interactive Companion Widget
+import { url } from "@/utils/url-utils";
+---
+
+<div
+  id="bangboo-widget"
+  class="fixed bottom-6 left-6 z-[990] select-none cursor-pointer group"
+  title="点击与邦布互动！"
+>
+  <!-- Bangboo Speech Bubble -->
+  <div
+    id="bangboo-speech-bubble"
+    class="opacity-0 translate-y-2 pointer-events-none transition-all duration-300 absolute -top-16 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1.5 rounded-[4px] text-xs font-bold font-mono tracking-wide bg-[#18191c] text-[#F6EE24] border border-[#F6EE24]/60 shadow-[0_4px_16px_rgba(0,0,0,0.6)] backdrop-blur-md"
+  >
+    <span id="bangboo-speech-text">嗯呢！(En-nah!)</span>
+    <!-- Little arrow -->
+    <div
+      class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-[#F6EE24]"
+    ></div>
+  </div>
+
+  <!-- Bangboo Avatar Body -->
+  <div class="bangboo-body relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#18191c]/90 border-2 border-[#F6EE24] p-1 shadow-[0_0_12px_rgba(246,238,36,0.35)] transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+    <img
+      src={url("/favicon/firefly-32.png")}
+      alt="Bangboo Mascot"
+      class="w-full h-full object-cover rounded-full pointer-events-none"
+    />
+    <!-- Status indicator light -->
+    <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#F6EE24] border-2 border-[#121316] animate-pulse"></span>
+  </div>
+</div>
+
+<style>
+  #bangboo-widget {
+    animation: bangboo-float 3s ease-in-out infinite;
+  }
+
+  @keyframes bangboo-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #bangboo-widget {
+      bottom: 4.5rem;
+      left: 1rem;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function initBangboo() {
+    const quotes = [
+      "嗯呢！嗯呢！（绳匠，今天有新的空洞委托！）",
+      "嗯呢~（摸鱼也是优秀代理人的必修课！）",
+      "嗯呢！（录像店 Random Play 营业中~）",
+      "嗯呢嗯呢！（检测到以太活性稳定，可以放心摸鱼！）",
+      "嗯呢！★（恭喜你发现隐藏邦布！）",
+      "嗯呢...（狡兔屋的委托账单又被退回了...）",
+      "嗯呢！（对魔六课警告：请勿在空洞内疲劳驾驶！）"
+    ];
+
+    let timer = null;
+    function triggerQuote() {
+      const bubble = document.getElementById("bangboo-speech-bubble");
+      const text = document.getElementById("bangboo-speech-text");
+      if (!bubble || !text) return;
+
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      text.textContent = randomQuote;
+
+      bubble.classList.remove("opacity-0", "translate-y-2", "pointer-events-none");
+      bubble.classList.add("opacity-100", "translate-y-0");
+
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        bubble.classList.remove("opacity-100", "translate-y-0");
+        bubble.classList.add("opacity-0", "translate-y-2", "pointer-events-none");
+      }, 3500);
+    }
+
+    // Attach click listener
+    function bindWidget() {
+      const widget = document.getElementById("bangboo-widget");
+      if (widget) {
+        widget.removeEventListener("click", triggerQuote);
+        widget.addEventListener("click", triggerQuote);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", bindWidget);
+    } else {
+      bindWidget();
+    }
+
+    document.addEventListener("swup:contentReplaced", bindWidget);
+  })();
+</script>
