@@ -64,14 +64,14 @@ const compassItems: CompassItem[] = [
 
 <section class="home-compass card-base p-4 mb-4 onload-animation" aria-label="绳网快速导航">
   <!-- Compass Header -->
-  <header class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 dark:border-white/10">
+  <header class="flex items-center justify-between pb-3 mb-3 border-b border-black/10 dark:border-white/10">
     <div class="flex items-center gap-2">
       <span class="w-1.5 h-4 bg-(--primary) rounded-[1px]"></span>
-      <h2 class="font-mono font-bold text-base md:text-lg text-neutral-100 tracking-wide flex items-center gap-2">
+      <h2 class="font-mono font-bold text-base md:text-lg text-neutral-900 dark:text-neutral-100 tracking-wide flex items-center gap-2">
         <span>快速带你前往</span>
         <span class="text-neutral-500 font-normal text-xs">// ROUTER</span>
       </h2>
-      <span class="text-xs text-neutral-400 hidden sm:inline-block">你想去的地方</span>
+      <span class="text-xs text-neutral-500 dark:text-neutral-400 hidden sm:inline-block">你想去的地方</span>
     </div>
     <div class="inline-flex items-center gap-1.5 px-2 py-0.5 text-[0.68rem] font-mono font-bold tracking-widest text-(--primary) bg-(--primary)/10 border border-(--primary)/30 rounded-[2px]">
       <span class="w-1.5 h-1.5 rounded-full bg-(--primary) animate-pulse"></span>
@@ -85,16 +85,16 @@ const compassItems: CompassItem[] = [
       compassItems.map((item) => (
         <a
           href={url(item.href)}
-          class="home-compass-item group relative flex flex-col items-center justify-center p-2.5 rounded-[4px] bg-black/30 dark:bg-black/40 border border-white/10 hover:border-(--primary) hover:bg-(--primary)/10 transition-all duration-200 active:scale-95"
+          class="home-compass-item group relative flex flex-col items-center justify-center p-2.5 rounded-[4px] bg-neutral-100/70 hover:bg-(--primary)/10 dark:bg-[#14161b] dark:hover:bg-(--primary)/15 border border-neutral-200/80 hover:border-(--primary) dark:border-white/10 dark:hover:border-(--primary) transition-all duration-200 active:scale-95 shadow-xs"
           aria-label={item.label}
         >
-          <div class="mb-1.5 p-2 rounded-full bg-white/5 group-hover:bg-(--primary)/20 text-neutral-300 group-hover:text-(--primary) transition-colors shadow-inner">
+          <div class="mb-1.5 p-2 rounded-full bg-white dark:bg-white/5 group-hover:bg-(--primary)/20 text-neutral-700 dark:text-neutral-200 group-hover:text-(--primary) transition-colors shadow-xs">
             <Icon is:inline name={item.icon} class="text-xl" />
           </div>
-          <span class="font-bold text-xs text-neutral-200 group-hover:text-(--primary) transition-colors tracking-wide">
+          <span class="font-bold text-xs text-neutral-800 dark:text-neutral-100 group-hover:text-(--primary) transition-colors tracking-wide">
             {item.label}
           </span>
-          <span class="font-mono text-[0.62rem] text-neutral-400 group-hover:text-(--primary)/80 transition-colors tracking-widest uppercase">
+          <span class="font-mono text-[0.62rem] text-neutral-500 dark:text-neutral-400 group-hover:text-(--primary)/90 transition-colors tracking-widest uppercase">
             {item.subLabel}
           </span>
           <!-- Corner brackets on hover -->

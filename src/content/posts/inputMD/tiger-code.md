@@ -3,7 +3,7 @@ title: 万象虎码
 published: 2026-09-14
 pinned: true
 description: "为什么我最终选择了万象虎码作为自己的输入法。"
-image: "./cover.avif"
+image: "./cover.webp"
 tags: ["输入法", "博客", "万象虎码", "指南"]
 category: 输入法折腾
 ---

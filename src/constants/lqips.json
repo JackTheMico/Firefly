@@ -33,5 +33,7 @@
   "public:assets/images/agents/ellen.webp": "c37475c87173be6f71",
   "public:assets/images/agents/ellen-static.png": "c37474c77172be6f70",
   "public:assets/images/agents/anby.webp": "bcccd4a6b6b8607486",
-  "public:assets/images/agents/anby-static.png": "bcccd4a6b6b8607386"
+  "public:assets/images/agents/anby-static.png": "bcccd4a6b6b8607386",
+  "src:content/posts/inputMD/cover.webp": "677d84698289505f68",
+  "src:content/posts/guide/cover.webp": "625d4b796f55786044"
 }
