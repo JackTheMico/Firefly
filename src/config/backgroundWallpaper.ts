@@ -2,7 +2,7 @@ import type { BackgroundWallpaperConfig } from "@/types/backgroundWallpaper";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 全屏透明，"none" 纯色背景无壁纸
-	mode: "overlay",
+	mode: "fullscreen",
 	// 是否启用背景视频播放，配置后将在导航栏显示视频播放按钮
 	playerEnable: true,
 	/**
@@ -73,20 +73,18 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否启用主页横幅文字
 			enable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "INTER-KNOT // 摸鱼岛",
 			// 主页横幅主标题字体大小
-			titleSize: "4.5rem",
+			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"New Eridu Proxy Terminal // 新艾利都绳网秘密终端",
+				"检测到以太活性稳定，随时准备接入委托。",
+				"狡兔屋、维多利亚家政、刑侦特勤组已接入终端。",
+				"上班是耗命给老板逆天改命，唯有摸鱼才是凭本事挣钱！",
 			],
 			// 主页横幅副标题字体大小
-			subtitleSize: "1.5rem",
+			subtitleSize: "1.35rem",
 			typewriter: {
 				// 是否启用打字机效果
 				// 打字机开启 → 循环显示所有副标题
@@ -158,7 +156,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 背景模糊度（设为0让壁纸保持清晰原画质感，卡片自身带有毛玻璃）
 		blur: 0,
 		// 卡片透明度，0-1之间，值越小越透明
-		cardOpacity: 0.82,
+		cardOpacity: 0.78,
 	},
 	// 全屏壁纸模式特有配置
 	fullscreen: {

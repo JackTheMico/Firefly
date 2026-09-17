@@ -169,3 +169,29 @@
     transition: none !important;
   }
 }
+
+/* ZZZ Fullscreen Banner & Typewriter HUD */
+#wallpaper-wrapper.wallpaper-fullscreen .banner-title {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 900 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  text-shadow:
+    0 0 24px rgba(246, 238, 36, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.9);
+}
+
+#wallpaper-wrapper.wallpaper-fullscreen .banner-subtitle {
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-weight: 600;
+  color: var(--primary) !important;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.04em;
+}
+
+#wallpaper-wrapper.wallpaper-fullscreen .scroll-down-indicator {
+  color: var(--primary) !important;
+  filter: drop-shadow(0 0 12px rgba(246, 238, 36, 0.5));
+}
+
