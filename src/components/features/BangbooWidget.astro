@@ -21,14 +21,21 @@ import { url } from "@/utils/url-utils";
   </div>
 
   <!-- Bangboo Avatar Body -->
-  <div class="bangboo-body relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#18191c]/90 border-2 border-[#F6EE24] p-1 shadow-[0_0_12px_rgba(246,238,36,0.35)] transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+  <div class="bangboo-body relative w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#18191c]/90 border-2 border-[#F6EE24] p-1 shadow-[0_0_15px_rgba(246,238,36,0.4)] transition-transform duration-200 group-hover:scale-110 group-active:scale-95 overflow-hidden">
     <img
-      src={url("/favicon/firefly-32.png")}
-      alt="Bangboo Mascot"
+      id="bangboo-img-idle"
+      src={url("/assets/images/bangboo/bangboo-idle.webp")}
+      alt="Bangboo Mascot Idle"
       class="w-full h-full object-cover rounded-full pointer-events-none"
     />
+    <img
+      id="bangboo-img-active"
+      src={url("/assets/images/bangboo/bangboo-active.webp")}
+      alt="Bangboo Mascot Active"
+      class="hidden w-full h-full object-cover rounded-full pointer-events-none"
+    />
     <!-- Status indicator light -->
-    <span class="absolute top-0 right-0 w-3 h-3 rounded-full bg-[#F6EE24] border-2 border-[#121316] animate-pulse"></span>
+    <span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-[#F6EE24] border-2 border-[#121316] animate-pulse"></span>
   </div>
 </div>
 
@@ -67,22 +74,92 @@ import { url } from "@/utils/url-utils";
     ];
 
     let timer = null;
+    let revertTimer = null;
+
+    function playEnnahSFX() {
+      try {
+        const AudioCtx = window.AudioContext || window["webkitAudioContext"];
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const now = ctx.currentTime;
+
+        // Harmonic tone 1: En~
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = "sine";
+        osc1.frequency.setValueAtTime(560, now);
+        osc1.frequency.exponentialRampToValueAtTime(750, now + 0.08);
+        osc1.frequency.exponentialRampToValueAtTime(600, now + 0.16);
+
+        gain1.gain.setValueAtTime(0.01, now);
+        gain1.gain.linearRampToValueAtTime(0.18, now + 0.03);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+
+        osc1.connect(gain1);
+        gain1.connect(ctx.destination);
+        osc1.start(now);
+        osc1.stop(now + 0.18);
+
+        // Harmonic tone 2: Nah!
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = "triangle";
+        osc2.frequency.setValueAtTime(840, now + 0.04);
+        osc2.frequency.exponentialRampToValueAtTime(1020, now + 0.12);
+        osc2.frequency.exponentialRampToValueAtTime(700, now + 0.22);
+
+        gain2.gain.setValueAtTime(0.001, now + 0.04);
+        gain2.gain.linearRampToValueAtTime(0.12, now + 0.08);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.24);
+
+        osc2.connect(gain2);
+        gain2.connect(ctx.destination);
+        osc2.start(now + 0.04);
+        osc2.stop(now + 0.24);
+      } catch (e) {
+        // AudioContext autoplay restrictions fallback gracefully
+      }
+    }
+
     function triggerQuote() {
       const bubble = document.getElementById("bangboo-speech-bubble");
       const text = document.getElementById("bangboo-speech-text");
-      if (!bubble || !text) return;
+      const imgIdle = document.getElementById("bangboo-img-idle");
+      const imgActive = document.getElementById("bangboo-img-active");
 
-      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-      text.textContent = randomQuote;
+      // Switch to Active Animation
+      if (imgIdle && imgActive) {
+        imgIdle.classList.add("hidden");
+        imgActive.classList.remove("hidden");
+      }
 
-      bubble.classList.remove("opacity-0", "translate-y-2", "pointer-events-none");
-      bubble.classList.add("opacity-100", "translate-y-0");
+      // Play robotic chirp sound
+      playEnnahSFX();
+
+      // Show Speech Bubble
+      if (bubble && text) {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        text.textContent = randomQuote;
+        bubble.classList.remove("opacity-0", "translate-y-2", "pointer-events-none");
+        bubble.classList.add("opacity-100", "translate-y-0");
+      }
 
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {
-        bubble.classList.remove("opacity-100", "translate-y-0");
-        bubble.classList.add("opacity-0", "translate-y-2", "pointer-events-none");
+        if (bubble) {
+          bubble.classList.remove("opacity-100", "translate-y-0");
+          bubble.classList.add("opacity-0", "translate-y-2", "pointer-events-none");
+        }
       }, 3500);
+
+      // Revert animation after 3.0 seconds
+      if (revertTimer) clearTimeout(revertTimer);
+      revertTimer = setTimeout(() => {
+        if (imgIdle && imgActive) {
+          imgActive.classList.add("hidden");
+          imgIdle.classList.remove("hidden");
+        }
+      }, 3000);
     }
 
     // Attach click listener

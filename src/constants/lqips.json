@@ -19,5 +19,19 @@
   "src:content/posts/guide/cover.avif": "c8bca9dde6d2babfb5",
   "src:assets/images/logo/firefly-light.png": "000000000000000000",
   "src:assets/images/logo/firefly-dark.png": "ffffffffffffffffff",
-  "public:assets/images/sponsor/alipay.jpg": "90b2df90b0de6591ce"
+  "public:assets/images/sponsor/alipay.jpg": "90b2df90b0de6591ce",
+  "public:assets/images/bangboo/bangboo-idle.webp": "1e3f4c3f6365507566",
+  "public:assets/images/bangboo/bangboo-idle-static.png": "1d3f4c3f6265507566",
+  "public:assets/images/bangboo/bangboo-active.webp": "6f625b6567666c747a",
+  "public:assets/images/bangboo/bangboo-active-static.png": "77685f6a68666c7277",
+  "public:assets/images/agents/zhuyuan.webp": "626061525255746e6e",
+  "public:assets/images/agents/zhuyuan-static.png": "626061525255746e6e",
+  "public:assets/images/agents/nicole.webp": "7847436f3e386b4841",
+  "public:assets/images/agents/nicole-static.png": "7e4c4779453f75504a",
+  "public:assets/images/agents/jane.webp": "406b7479a0a5697e83",
+  "public:assets/images/agents/jane-static.png": "436c757da2a6697d83",
+  "public:assets/images/agents/ellen.webp": "c37475c87173be6f71",
+  "public:assets/images/agents/ellen-static.png": "c37474c77172be6f70",
+  "public:assets/images/agents/anby.webp": "bcccd4a6b6b8607486",
+  "public:assets/images/agents/anby-static.png": "bcccd4a6b6b8607386"
 }
