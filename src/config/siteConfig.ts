@@ -43,14 +43,14 @@ export const siteConfig: SiteConfig = {
 	title: "摸鱼岛",
 
 	// 站点副标题
-	subtitle: "摸鱼侠的小家",
+	subtitle: "摸鱼岛 · 绳网秘密终端",
 
 	// 站点 URL
 	site_url: "https://moyuxia.uk",
 
 	// 站点描述
 	description:
-		"摸鱼侠的个人技术博客，专注CachyOS上的常用开发工具，量化交易分享，以及个人成长。",
+		"摸鱼侠的绳网秘密技术终端，专注CachyOS开发工具、量化交易策略与空洞探索分享。",
 
 	// 站点关键词
 	keywords: [
