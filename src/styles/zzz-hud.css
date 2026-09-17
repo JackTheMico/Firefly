@@ -1,0 +1,171 @@
+/* =========================================================
+   Zenless Zone Zero (ZZZ) - Chiseled HUD Frames & Micro-Interactions
+   ========================================================= */
+
+/* --- 斜切角 HUD 线框 (Chiseled HUD Frame) --- */
+.card-base,
+.card-base-transparent {
+  position: relative;
+  /* 绝区零硬核 10px 几何切角 */
+  clip-path: polygon(
+    0 10px,
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+  border-radius: 0 !important; /* 取代柔和圆角 */
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.2s ease-out;
+}
+
+/* HUD 装饰四角指示线 (Tech Corner Accents) */
+.card-base::before,
+.card-base-transparent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--primary);
+  border-left: 2px solid var(--primary);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.card-base::after,
+.card-base-transparent::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+/* 悬浮微升与荧光酸黄光晕 */
+.card-base:hover,
+.card-base-transparent:hover {
+  box-shadow: 0 0 16px rgba(246, 238, 36, 0.2), 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* --- 斑马警示斜条纹 (Hazard Caution Stripes) --- */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #121316,
+    #121316 8px,
+    #F6EE24 8px,
+    #F6EE24 16px
+  ) !important;
+  color: #121316 !important;
+}
+
+.hazard-stripes-accent {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(246, 238, 36, 0.15),
+    rgba(246, 238, 36, 0.15) 6px,
+    transparent 6px,
+    transparent 12px
+  ) !important;
+}
+
+/* --- 绝区零科技角标与标题 Glitch 动效 --- */
+@keyframes zzz-glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  20% {
+    transform: translate(-1.5px, 1px);
+    text-shadow: 2px 0 #F6EE24, -2px 0 #FF5522;
+  }
+  40% {
+    transform: translate(1.5px, -1px);
+    text-shadow: -2px 0 #F6EE24, 2px 0 #FF5522;
+  }
+  60% {
+    transform: translate(-1px, 0.5px);
+    text-shadow: 1px 0 #F6EE24, -1px 0 #FF5522;
+  }
+  80% {
+    transform: translate(1px, -0.5px);
+    text-shadow: none;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+.post-card-title:hover {
+  animation: zzz-glitch 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  color: var(--primary) !important;
+}
+
+/* 按钮点击触感 */
+.btn-regular,
+.btn-card {
+  clip-path: polygon(
+    0 6px,
+    6px 0,
+    100% 0,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    0 100%
+  );
+  border-radius: 0 !important;
+  transition: transform 0.1s ease-out, background-color 0.15s ease-out;
+}
+
+.btn-regular:active,
+.btn-card:active {
+  transform: scale(0.97);
+}
+
+/* 分类胶囊样式升级为 ZZZ 街头工业矩形 */
+.category-pill {
+  border-radius: 2px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-left: 3px solid var(--primary) !important;
+}
+
+.category-pill[data-active] {
+  background: var(--primary) !important;
+  color: #121316 !important;
+  font-weight: 700 !important;
+}
+
+.category-pill[data-active] .pill-count {
+  background: rgba(18, 19, 22, 0.25) !important;
+  color: #121316 !important;
+}
+
+/* 标签 Chip 街头化 */
+.tag-item {
+  border-radius: 2px !important;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
+
+/* 尊重减弱动效偏好 (prefers-reduced-motion) */
+@media (prefers-reduced-motion: reduce) {
+  .post-card-title:hover {
+    animation: none !important;
+  }
+  .card-base,
+  .card-base-transparent {
+    transition: none !important;
+  }
+}
