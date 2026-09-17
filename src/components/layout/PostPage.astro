@@ -54,6 +54,7 @@ const coverPositionClass =
         pinned={entry.data.pinned}
         password={!!entry.data.password}
         loading={index < 2 ? "eager" : "lazy"}
+        index={page.start + index + 1}
         class:list="onload-animation post-card-item"
         style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
       />

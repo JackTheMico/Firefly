@@ -1,7 +1,6 @@
 ---
-import Live2DWidget from "@components/features/Live2DWidget.astro";
-
 import BangbooWidget from "@components/features/BangbooWidget.astro";
+import Live2DWidget from "@components/features/Live2DWidget.astro";
 import Footer from "@components/layout/Footer.astro";
 import Navbar from "@components/layout/Navbar.astro";
 import SideBar from "@components/layout/SideBar.astro";
@@ -862,15 +861,45 @@ const hasMultipleImages =
     <div id="banner-overlay-container" class="absolute inset-0 z-20 pointer-events-none transition-swup-fade">    <!-- Home page text overlay - 始终渲染以便切换模式时控制显示 -->
     {homeTextEnable && (
         <div class={`banner-home-text-overlay absolute inset-0 z-20 flex items-center justify-center ${!showHomeText ? 'hidden' : ''}`}>
-            <div class="w-4/5 lg:w-3/4 text-center mb-0">
-                <div class="flex flex-col">
+            {/* ZZZ High-Tech Viewfinder HUD Overlays (Inspired by fqzlr.com) */}
+            <div class="zzz-hero-crosshairs pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+                <!-- Horizontal hairline crossbars -->
+                <div class="zzz-crosshair-line zzz-crosshair-left"></div>
+                <div class="zzz-crosshair-line zzz-crosshair-right"></div>
+                <!-- Circular Target Reticle -->
+                <div class="zzz-target-reticle">
+                    <span class="zzz-bracket zzz-bracket-tl"></span>
+                    <span class="zzz-bracket zzz-bracket-tr"></span>
+                    <span class="zzz-bracket zzz-bracket-bl"></span>
+                    <span class="zzz-bracket zzz-bracket-br"></span>
+                    <div class="zzz-reticle-inner-ring"></div>
+                </div>
+            </div>
+
+            <!-- Right Vertical Watermark Typography -->
+            <div class="zzz-hero-watermark pointer-events-none hidden xl:flex flex-col items-center gap-2 absolute right-8 top-1/2 -translate-y-1/2 text-white/30 font-mono text-xs tracking-[0.3em] uppercase select-none">
+                <span class="writing-vertical-rl">INTER-KNOT</span>
+                <span class="h-10 w-[1px] bg-white/20"></span>
+                <span class="text-(--primary) writing-vertical-rl font-bold">LEGENDARY PROXY</span>
+                <span class="h-6 w-[1px] bg-white/20"></span>
+                <span class="writing-vertical-rl text-[0.65rem] opacity-60">SECTOR // 06</span>
+            </div>
+
+            <div class="relative z-10 w-4/5 lg:w-3/4 max-w-4xl text-center flex flex-col items-center">
+                <!-- Top Identity Pill -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-mono font-bold tracking-widest text-(--primary) bg-black/50 border border-(--primary)/40 rounded-full backdrop-blur-md shadow-[0_0_12px_rgba(246,238,36,0.25)]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-(--primary) animate-pulse"></span>
+                    <span>[ PROXY NETWORK // 特级绳匠终端 ]</span>
+                </div>
+
+                <div class="flex flex-col items-center w-full">
                     {backgroundWallpaper.common?.homeText?.title && (
-                        <div class="banner-title font-bold text-white mb-2 lg:mb-4 leading-tight" style={{ '--banner-title-size': backgroundWallpaper.common.homeText.titleSize || "3rem" }}>
+                        <div class="banner-title font-black text-white mb-2 lg:mb-3 leading-tight tracking-wider" style={{ '--banner-title-size': backgroundWallpaper.common.homeText.titleSize || "3rem" }}>
                             {backgroundWallpaper.common.homeText.title}
                         </div>
                     )}
                     {backgroundWallpaper.common?.homeText?.subtitle && (
-                        <div id="banner-subtitle" class="banner-subtitle text-white/90 leading-snug" style={{ fontSize: backgroundWallpaper.common.homeText.subtitleSize || "1.5rem" }} data-subtitles={JSON.stringify(backgroundWallpaper.common.homeText.subtitle)}>
+                        <div id="banner-subtitle" class="banner-subtitle text-white/90 leading-snug mb-5" style={{ fontSize: backgroundWallpaper.common.homeText.subtitleSize || "1.35rem" }} data-subtitles={JSON.stringify(backgroundWallpaper.common.homeText.subtitle)}>
                             {backgroundWallpaper.common.homeText.typewriter?.enable ? (
                                 <TypewriterText
                                     text={backgroundWallpaper.common.homeText.subtitle}
@@ -883,6 +912,18 @@ const hasMultipleImages =
                             )}
                         </div>
                     )}
+
+                    <!-- Bottom Glassmorphism Status Capsule -->
+                    <div class="inline-flex flex-col sm:flex-row items-center justify-between gap-3 px-6 py-2 rounded-xl bg-black/45 border border-white/15 backdrop-blur-md shadow-2xl text-xs font-mono max-w-xl w-full">
+                        <div class="flex items-center gap-2 text-(--primary) font-bold tracking-wider">
+                            <span class="inline-block w-1.5 h-1.5 bg-(--primary) rounded-sm"></span>
+                            <span>以太活性指数: 0.02% (稳定)</span>
+                        </div>
+                        <span class="hidden sm:inline-block w-[1px] h-3 bg-white/20"></span>
+                        <div class="text-neutral-300 tracking-wider text-[0.7rem] uppercase">
+                            WELCOME TO PROXY TERMINAL. ENJOY YOUR STAY!
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

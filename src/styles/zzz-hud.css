@@ -195,3 +195,89 @@
   filter: drop-shadow(0 0 12px rgba(246, 238, 36, 0.5));
 }
 
+/* ZZZ Viewfinder Reticle & Crosshair HUD (Inspired by fqzlr.com) */
+.zzz-hero-crosshairs {
+  z-index: 1;
+}
+
+.zzz-crosshair-line {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(246, 238, 36, 0.45) 30%, rgba(255, 255, 255, 0.6) 50%, rgba(246, 238, 36, 0.45) 70%, transparent);
+}
+
+.zzz-crosshair-left {
+  left: 0;
+  width: calc(50% - 200px);
+}
+
+.zzz-crosshair-right {
+  right: 0;
+  width: calc(50% - 200px);
+}
+
+/* Circular Target Reticle */
+.zzz-target-reticle {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  max-width: 90vw;
+  max-height: 90vw;
+  border-radius: 50%;
+  border: 1px dashed rgba(246, 238, 36, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.zzz-reticle-inner-ring {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.zzz-bracket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--primary);
+  border-style: solid;
+}
+
+.zzz-bracket-tl {
+  top: 24px;
+  left: 24px;
+  border-width: 2px 0 0 2px;
+}
+
+.zzz-bracket-tr {
+  top: 24px;
+  right: 24px;
+  border-width: 2px 2px 0 0;
+}
+
+.zzz-bracket-bl {
+  bottom: 24px;
+  left: 24px;
+  border-width: 0 0 2px 2px;
+}
+
+.zzz-bracket-br {
+  bottom: 24px;
+  right: 24px;
+  border-width: 0 2px 2px 0;
+}
+
+/* Vertical Typography Utility */
+.writing-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+/* ZZZ Floating Navbar Pill Polish */
+#navbar > div {
+  border: 1px solid rgba(246, 238, 36, 0.25) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(246, 238, 36, 0.08) !important;
+}
