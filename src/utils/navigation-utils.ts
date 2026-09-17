@@ -156,8 +156,9 @@ export function isHomePage(): boolean {
  * 检查是否为文章页面
  */
 export function isPostPage(): boolean {
-	const path = getCurrentPath();
-	return path.startsWith(url("/posts/"));
+	const path = getCurrentPath().replace(/\/$/, "");
+	const postsPrefix = url("/posts").replace(/\/$/, "");
+	return path.startsWith(`${postsPrefix}/`) && path !== postsPrefix;
 }
 
 /**
