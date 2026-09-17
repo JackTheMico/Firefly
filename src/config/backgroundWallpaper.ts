@@ -2,7 +2,7 @@ import type { BackgroundWallpaperConfig } from "@/types/backgroundWallpaper";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 全屏透明，"none" 纯色背景无壁纸
-	mode: "banner",
+	mode: "overlay",
 	// 是否启用背景视频播放，配置后将在导航栏显示视频播放按钮
 	playerEnable: true,
 	/**
@@ -154,11 +154,11 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 层级，确保壁纸在背景层
 		zIndex: -1,
 		// 壁纸透明度
-		opacity: 0.8,
-		// 背景模糊度
-		blur: 10,
+		opacity: 0.88,
+		// 背景模糊度（设为0让壁纸保持清晰原画质感，卡片自身带有毛玻璃）
+		blur: 0,
 		// 卡片透明度，0-1之间，值越小越透明
-		cardOpacity: 0.5,
+		cardOpacity: 0.82,
 	},
 	// 全屏壁纸模式特有配置
 	fullscreen: {
