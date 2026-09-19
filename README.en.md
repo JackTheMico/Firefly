@@ -1,5 +1,5 @@
 
-<img src="./docs/images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
+<img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805538556_1131.png" width = "350" height = "500" alt="Firefly" align=right />
 
 <div align="center">
 
@@ -45,17 +45,17 @@
 <table width="100%" align="center">
   <tr>
     <td colspan="3" align="center">
-      <img src="./docs/images/1.webp" >
+      <img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805531353_1.webp" >
       <br>Banner Mode</td>
     </td>
   </tr>
   <tr>
-    <td align="center"><img src="./docs/images/3.webp" width="300"><br>Overlay Mode</td>
-    <td align="center"><img src="./docs/images/2.webp" width="300"><br>Fullscreen Wallpaper Mode</td>
-    <td align="center"><img src="./docs/images/4.webp" width="300"><br>Solid Color Mode</td>
+    <td align="center"><img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805547643_3.webp" width="300"><br>Overlay Mode</td>
+    <td align="center"><img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805545779_2.webp" width="300"><br>Fullscreen Wallpaper Mode</td>
+    <td align="center"><img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805556379_4.webp" width="300"><br>Solid Color Mode</td>
   </tr>
 </table>
-<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
+<img alt="Lighthouse" src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805567287_Lighthouse.png" />
 
 >[!TIP]
 >

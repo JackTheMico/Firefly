@@ -1,5 +1,5 @@
 
-<img src="./images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
+<img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805538556_1131.png" width = "350" height = "500" alt="Firefly" align=right />
 
 <div align="center">
 
@@ -46,17 +46,17 @@
 <table width="100%" align="center">
   <tr>
     <td colspan="3" align="center">
-      <img src="./images/1.webp" >
+      <img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805531353_1.webp" >
       <br>バナーモード</td>
     </td>
   </tr>
   <tr>
-    <td align="center"><img src="./images/3.webp" width="300"><br>オーバーレイモード</td>
-    <td align="center"><img src="./images/2.webp" width="300"><br>全画面壁紙モード</td>
-    <td align="center"><img src="./images/4.webp" width="300"><br>ソリッドカラーモード</td>
+    <td align="center"><img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805547643_3.webp" width="300"><br>オーバーレイモード</td>
+    <td align="center"><img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805545779_2.webp" width="300"><br>全画面壁紙モード</td>
+    <td align="center"><img src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805556379_4.webp" width="300"><br>ソリッドカラーモード</td>
   </tr>
 </table>
-<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
+<img alt="Lighthouse" src="https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805567287_Lighthouse.png" />
 
 >[!TIP]
 >

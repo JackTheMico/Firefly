@@ -15,8 +15,10 @@ export const AGENTS_POOL: AgentOnDuty[] = [
 		id: "ellen",
 		name: "艾莲·乔",
 		faction: "维多利亚家政",
-		avatarAnimated: "/assets/images/agents/ellen.webp",
-		avatarStatic: "/assets/images/agents/ellen-static.png",
+		avatarAnimated:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805610288_ellen.webp",
+		avatarStatic:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805597771_ellen-static.png",
 		badgeText: "今日值勤: 艾莲·乔 // 维多利亚家政",
 		quote: "麻烦死了...速战速决吧，我还赶着去吃甜点呢。",
 	},
@@ -24,8 +26,10 @@ export const AGENTS_POOL: AgentOnDuty[] = [
 		id: "anby",
 		name: "安比·德玛拉",
 		faction: "狡兔屋",
-		avatarAnimated: "/assets/images/agents/anby.webp",
-		avatarStatic: "/assets/images/agents/anby-static.png",
+		avatarAnimated:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805592428_anby.webp",
+		avatarStatic:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805580280_anby-static.png",
 		badgeText: "今日值勤: 安比·德玛拉 // 狡兔屋",
 		quote: "汉堡和电影是必需品。委托，已经确认接收。",
 	},
@@ -33,8 +37,10 @@ export const AGENTS_POOL: AgentOnDuty[] = [
 		id: "jane",
 		name: "简·杜",
 		faction: "刑侦特勤组",
-		avatarAnimated: "/assets/images/agents/jane.webp",
-		avatarStatic: "/assets/images/agents/jane-static.png",
+		avatarAnimated:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805628324_jane.webp",
+		avatarStatic:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805613831_jane-static.png",
 		badgeText: "今日值勤: 简·杜 // 刑侦特勤组",
 		quote: "放轻松点，绳匠。跟着我的节奏，绝对不会被抓到的~",
 	},
@@ -42,8 +48,10 @@ export const AGENTS_POOL: AgentOnDuty[] = [
 		id: "nicole",
 		name: "妮可·德玛拉",
 		faction: "狡兔屋",
-		avatarAnimated: "/assets/images/agents/nicole.webp",
-		avatarStatic: "/assets/images/agents/nicole-static.png",
+		avatarAnimated:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805642167_nicole.webp",
+		avatarStatic:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805626723_nicole-static.png",
 		badgeText: "今日值勤: 妮可·德玛拉 // 狡兔屋",
 		quote: "狡兔屋全员待命！这次的委托报酬可不能再打折了！",
 	},
@@ -51,8 +59,10 @@ export const AGENTS_POOL: AgentOnDuty[] = [
 		id: "zhuyuan",
 		name: "朱鸢",
 		faction: "刑侦特勤组",
-		avatarAnimated: "/assets/images/agents/zhuyuan.webp",
-		avatarStatic: "/assets/images/agents/zhuyuan-static.png",
+		avatarAnimated:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805662626_zhuyuan.webp",
+		avatarStatic:
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805649810_zhuyuan-static.png",
 		badgeText: "今日值勤: 朱鸢 // 刑侦特勤组",
 		quote: "治安局刑侦特勤组朱鸢，随时准备应对空洞灾害与突发事态！",
 	},

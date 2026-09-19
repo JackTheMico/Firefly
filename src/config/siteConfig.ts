@@ -112,9 +112,11 @@ export const siteConfig: SiteConfig = {
 		// 例如: { type: "image", value: "assets/images/logo.png", valueDark: "assets/images/logo-dark.png", alt: "Logo" }
 		// 使用 Astro 图标库时不需要设置 valueDark，图标会自动跟随主题亮暗色切换
 		logo: {
-			type: "image",
-			value: "assets/images/logo/firefly-light.png",
-			valueDark: "assets/images/logo/firefly-dark.png",
+			type: "url",
+			value:
+				"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805858140_firefly-light.png",
+			valueDark:
+				"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805849800_firefly-dark.png",
 			alt: "🍀",
 		},
 		// 导航栏标题

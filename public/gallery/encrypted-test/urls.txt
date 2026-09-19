@@ -1,10 +1,10 @@
 # 每行一个图片 URL，支持 jpg/png/webp/avif/gif后缀
 # # 号开头的行为注释，空行会被忽略
 # 示例：
-https://s41.ax1x.com/2026/05/13/peXsfit.webp
-https://s41.ax1x.com/2026/05/13/peXyh79.jpg
-https://s41.ax1x.com/2026/05/13/peXshJP.webp
-https://s41.ax1x.com/2026/05/13/peXyWm4.jpg
-https://s41.ax1x.com/2026/05/13/peXsRII.webp
-https://s41.ax1x.com/2026/05/13/peXyf0J.jpg
-https://s41.ax1x.com/2026/05/13/peXs2dA.webp
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805885426_tmpdrd4e8xb.webp
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805974691_tmpj426itv0.jpg
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805911212_tmp57y0o1km.webp
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789807619970_peXyWm4.jpg
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805915563_tmpvpmknnpd.webp
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805951432_tmpwldf6ay2.jpg
+https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805894415_tmpz0ywoi03.webp

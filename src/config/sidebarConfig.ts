@@ -192,7 +192,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			specificConfig: {
 				ad: {
 					image: {
-						src: "/assets/images/ad/ad1.webp",
+						src: "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805578846_ad1.webp",
 						alt: "广告横幅",
 						link: "https://haoka.lot-ml.com/plugreg.html?agentid=1423316",
 						external: true,

@@ -19,42 +19,42 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	 *
 	 * 如果只使用一张图片或者使用随机图API，推荐直接使用字符串格式：
 	 * desktop: "https://t.alcy.cc/pc",   // 随机图API
-	 * desktop: "assets/images/DesktopWallpaper/d1.avif", // 单张图片
+	 * desktop: "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805778749_d1.avif", // 单张图片
 	 *
 	 * mobile: "https://t.alcy.cc/mp", // 随机图API
-	 * mobile: "assets/images/MobileWallpaper/m1.avif", // 单张图片
+	 * mobile: "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805818616_m1.avif", // 单张图片
 	 *
 	 * 支持配置多张图片（数组），每次刷新页面随机显示一张：
 	 * desktop: [
-	 * "assets/images/DesktopWallpaper/d1.avif",
-	 * "assets/images/DesktopWallpaper/d2.avif",
+	 * "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805778749_d1.avif",
+	 * "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805787126_d2.avif",
 	 * ],
 	 *
 	 * mobile:[
-	 *   "assets/images/MobileWallpaper/m1.avif",
-	 *   "assets/images/MobileWallpaper/m2.avif",
+	 *   "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805818616_m1.avif",
+	 *   "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805823033_m2.avif",
 	 * ],
 	 */
 	src: {
 		// 桌面背景图片（支持单张或多张随机）
-		// desktop: "assets/images/DesktopWallpaper/d1.avif",
+		// desktop: "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805778749_d1.avif",
 		desktop: [
-			"assets/images/DesktopWallpaper/d1.avif",
-			"assets/images/DesktopWallpaper/d2.avif",
-			"assets/images/DesktopWallpaper/d3.avif",
-			"assets/images/DesktopWallpaper/d4.avif",
-			"assets/images/DesktopWallpaper/d5.avif",
-			"assets/images/DesktopWallpaper/d6.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805778749_d1.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805787126_d2.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805789229_d3.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805793913_d4.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805801476_d5.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805809460_d6.avif",
 		],
 		// 移动背景图片（支持单张或多张随机）
-		// mobile: "assets/images/MobileWallpaper/m1.avif",
+		// mobile: "https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805818616_m1.avif",
 		mobile: [
-			"assets/images/MobileWallpaper/m1.avif",
-			"assets/images/MobileWallpaper/m2.avif",
-			"assets/images/MobileWallpaper/m3.avif",
-			"assets/images/MobileWallpaper/m4.avif",
-			"assets/images/MobileWallpaper/m5.avif",
-			"assets/images/MobileWallpaper/m6.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805818616_m1.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805823033_m2.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805827807_m3.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805838455_m4.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805840587_m5.avif",
+			"https://jackwyimgbed.dlwxxxdlw.workers.dev/file/1789805844097_m6.avif",
 		],
 		// 背景视频播放地址
 		// 支持单个视频路径（字符串）或多个视频循环（数组，参考上面壁纸配置）
